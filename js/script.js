@@ -46,7 +46,18 @@ createApp({
         },
 
         deleteTask(index) {
-            this.toDoList.slice[index, 1];
+            axios.get("./src/utilities/delete.php", {
+                params: {
+                    id: index
+                }
+            })
+            .then(function(response) {
+                console.log(response);
+                window.location.reload(true);
+            })
+            .catch(function(error) {
+                console.log(error);
+            })
         }
     },
 
