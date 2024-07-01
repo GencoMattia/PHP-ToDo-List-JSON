@@ -28,7 +28,7 @@
                         Inserisci cosa devi fare:
                     </label>
                     <input type="text" name="toDoItem" id="toDoItem" v-model="toAddItem">
-                    <button type="submit" @click="addItem">
+                    <button type="submit">
                         Aggiungi
                     </button>
                 </form>
