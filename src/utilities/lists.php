@@ -43,4 +43,8 @@ $toDoList = [
     ]
 ];
 
+header("Content-Type: application/json");
+
+echo json_encode($toDoList);
+
 ?>
