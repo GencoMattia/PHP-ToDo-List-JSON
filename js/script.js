@@ -39,6 +39,10 @@ createApp({
                     console.log(error);
                 })
             }
+        },
+
+        isItDone(num) {
+            this.toDoList[num].isDone = !this.toDoList[num].isDone;
         }
     },
 

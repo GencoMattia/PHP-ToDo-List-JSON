@@ -9,5 +9,4 @@ $data = json_decode($rawData, true);
 
 echo json_encode($data);    
 
-
 ?>

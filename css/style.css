@@ -1,0 +1,9 @@
+.done {
+    text-decoration: line-through;
+    background-color: aqua;
+    color: red;
+}
+
+body {
+    font-size: 5rem;
+}

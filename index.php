@@ -17,8 +17,11 @@
         <main>
             <section class="list-wrapper">
                 <ul>
-                    <li v-for="item in toDoList" class="todo-item">
-                        {{ item.text }}
+                    <li v-for="(item, index) in toDoList" :key="index" class="todo-item">
+                        <span @click="isItDone(index)" :class="item.isDone === true ? 'done' : ''">
+                            {{ item.text }}
+                            {{ index }}
+                        </span>
                     </li>
                 </ul>
             </section>
