@@ -21,6 +21,7 @@
                         <span :class="item.isDone === true ? 'done' : ''">
                             {{ item.text }}
                             {{ index }}
+                            {{ item.id }}
                         </span>
                         <button v-if="item.isDone" @click="deleteTask(index)">
                             X
