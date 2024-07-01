@@ -1,4 +1,5 @@
 <?php 
+header("Content-Type: application/json");
 
 if(isset($_GET["toDoItem"])) {
     $data = file_get_contents("../../db/toDoList.json");
@@ -13,9 +14,10 @@ if(isset($_GET["toDoItem"])) {
     $jsonData = json_encode($data);
 
     file_put_contents("../../db/toDoList.json", $jsonData);
+
+    header("Location: ../../index.php");   
 } else {
     http_response_code(404);
 }
 
-header("Content-Type: application/json");
 ?>
