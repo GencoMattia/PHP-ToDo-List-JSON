@@ -43,6 +43,10 @@ createApp({
 
         isItDone(num) {
             this.toDoList[num].isDone = !this.toDoList[num].isDone;
+        },
+
+        deleteTask(index) {
+            this.toDoList.slice[index, 1];
         }
     },
 

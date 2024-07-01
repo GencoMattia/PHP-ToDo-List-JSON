@@ -17,11 +17,14 @@
         <main>
             <section class="list-wrapper">
                 <ul>
-                    <li v-for="(item, index) in toDoList" :key="index" class="todo-item">
-                        <span @click="isItDone(index)" :class="item.isDone === true ? 'done' : ''">
+                    <li v-for="(item, index) in toDoList" :key="index" class="todo-item task" @click="isItDone(index)">
+                        <span :class="item.isDone === true ? 'done' : ''">
                             {{ item.text }}
                             {{ index }}
                         </span>
+                        <button v-if="item.isDone" @click="deleteTask(index)">
+                            X
+                        </button>
                     </li>
                 </ul>
             </section>

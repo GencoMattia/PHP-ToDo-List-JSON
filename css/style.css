@@ -4,6 +4,6 @@
     color: red;
 }
 
-body {
-    font-size: 5rem;
+.task {
+    cursor: pointer;
 }
