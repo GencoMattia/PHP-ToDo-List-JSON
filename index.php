@@ -1,7 +1,5 @@
 <?php 
 
-// include_once __DIR__ . "/src/utilities/lists.php";
-
 ?>
 
 <!DOCTYPE html>
@@ -18,19 +16,19 @@
     <div id="app">
         <main>
             <section class="list-wrapper">
-                <article v-for="item in toDoList" class="todo-item">
-                    <h2>
+                <ul>
+                    <li v-for="item in toDoList" class="todo-item">
                         {{ item.text }}
-                    </h2>
-                </article>
+                    </li>
+                </ul>
             </section>
             <section class="form-container">
-                <form action="./src/utilities/lists.php" method="GET">
+                <form action="./src/utilities/post.php" method="GET">
                     <label for="toDoItem">
                         Inserisci cosa devi fare:
                     </label>
                     <input type="text" name="toDoItem" id="toDoItem" v-model="toAddItem">
-                    <button type="submit">
+                    <button type="submit" @click="addItem">
                         Aggiungi
                     </button>
                 </form>

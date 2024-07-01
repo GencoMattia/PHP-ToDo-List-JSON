@@ -43,9 +43,9 @@ $toDoList = [
     ]
 ];
 
-header("Content-Type: application/json");
+// header("Content-Type: application/json");
 
-$jsonToDoList = json_encode($toDoList);
-file_put_contents("../../db/toDoList.json", $jsonToDoList);
+// $jsonToDoList = json_encode($toDoList);
+// file_put_contents("../../db/toDoList.json", $jsonToDoList);
 
 ?>

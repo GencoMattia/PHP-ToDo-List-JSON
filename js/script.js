@@ -26,9 +26,17 @@ createApp({
 
         addItem() {
             if(this.toAddItem.trim() !== "") {
-                toDoList.push({
-                    text: this.toAddItem,
-                    isDone: false,
+                axios.get("./src/utilities/post.php", {
+                    params: {
+                        text: this.toAddItem,
+                        isDone: false,
+                    }
+                })
+                .then(function(response) {
+                    console.log(response);
+                })
+                .catch(function(error) {
+                    console.log(error);
                 })
             }
         }
