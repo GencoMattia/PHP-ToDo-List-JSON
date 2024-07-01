@@ -14,10 +14,11 @@ createApp({
                     
                 }
             })
-            .then(response => {
-                this.toDoList = response.data;
+            .then((response) => {
+                console.log(response);
+                // this.toDoList = response.data;
             })
-            .catch(error => {
+            .catch(function(error) {
                 console.error("Errore durante il recupero della lista:", error);
             })
         }   
