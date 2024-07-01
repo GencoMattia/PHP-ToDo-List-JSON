@@ -43,10 +43,17 @@ $toDoList = [
     ]
 ];
 
-header("Content-Type: application/json");
+if(isset($_GET["toDoItem"])) {
+    $toDoList [] = [
+        "text" => trim($newItem),
+        "isDone" => false,
+    ];
+};
 
 
 $jsonToDoList = json_encode($toDoList);
-file_put_contents("../../json/toDoList.json", $jsonToDoList);
+file_put_contents("../../db/toDoList.json", $jsonToDoList);
+
+header("Content-Type: application/json");
 
 ?>

@@ -22,6 +22,17 @@
                     </h2>
                 </article>
             </section>
+            <section class="form-container">
+                <form action="./src/utilities/lists.php" method="GET">
+                    <label for="toDoItem">
+                        Inserisci cosa devi fare:
+                    </label>
+                    <input type="text" name="toDoItem" id="toDoItem" v-model="toAddItem">
+                    <button type="submit">
+                        Aggiungi
+                    </button>
+                </form>
+            </section>
         </main>
     </div>
     
