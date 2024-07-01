@@ -17,4 +17,5 @@ if(isset($_GET["toDoItem"])) {
     http_response_code(404);
 }
 
+header("Content-Type: application/json");
 ?>

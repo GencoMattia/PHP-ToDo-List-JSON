@@ -42,7 +42,7 @@ createApp({
         }
     },
 
-    mounted() {
+    created() {
         this.getToDoList();
     }
 }).mount('#app')
