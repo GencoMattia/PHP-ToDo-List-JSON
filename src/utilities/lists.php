@@ -45,6 +45,8 @@ $toDoList = [
 
 header("Content-Type: application/json");
 
-echo json_encode($toDoList);
+
+$jsonToDoList = json_encode($toDoList);
+file_put_contents("toDoList.json", $jsonToDoList);
 
 ?>
