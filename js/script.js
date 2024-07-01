@@ -10,7 +10,7 @@ createApp({
 
     methods: {
         getToDoList() { 
-            axios.get('./db/toDoList.json', {
+            axios.get("./src/utilities/get.php", {
                 params: {
                     
                 }
