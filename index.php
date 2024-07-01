@@ -14,7 +14,15 @@
 </head>
 <body>
     <div id="app">
-
+        <main>
+            <section class="list-wrapper">
+                <article v-for="item in toDoList" class="todo-item">
+                    <h2>
+                        {{ item.text }}
+                    </h2>
+                </article>
+            </section>
+        </main>
     </div>
     
     <!-- axios -->

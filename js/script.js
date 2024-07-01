@@ -16,7 +16,7 @@ createApp({
             })
             .then((response) => {
                 console.log(response);
-                // this.toDoList = response.data;
+                this.toDoList = response.data;
             })
             .catch(function(error) {
                 console.error("Errore durante il recupero della lista:", error);
