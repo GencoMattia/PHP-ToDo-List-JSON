@@ -22,7 +22,16 @@ createApp({
             .catch(function(error) {
                 console.error("Errore durante il recupero della lista:", error);
             })
-        }   
+        },   
+
+        addItem() {
+            if(this.toAddItem.trim() !== "") {
+                toDoList.push({
+                    text: this.toAddItem,
+                    isDone: false,
+                })
+            }
+        }
     },
 
     mounted() {
